@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary-yellow: #ffc40b;
+  --color-product-background: #F0F1F3
+  --font-zendots: "Zen Dots";
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-sans: "Pretendard", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+      Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  html {
+    font-family: var(--font-sans);
+  }
+}
+
+@utility show-only-largescreens {
+  @apply hidden md:block;
+}
