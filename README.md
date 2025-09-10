@@ -151,67 +151,6 @@ src/
         └── classNameMerge.ts
 ```
 
-## 📐 Development Guidelines
-
-### 1. Component Architecture
-
-#### Atomic Design Implementation
-
-- **Atoms**: Basic building blocks (Button, Input, Text)
-- **Molecules**: Combinations of atoms (FormInput, TableRow)
-- **Organisms**: Complex components (Table, Header, Sidebar)
-
-#### Naming Conventions
-
-- **Components**: PascalCase (`BasicButton`, `MemberTable`)
-- **Files**: PascalCase for components (`BasicButton.tsx`)
-- **Folders**: camelCase (`memberManage`, `serviceManage`)
-- **Variables/Functions**: camelCase (`formData`, `handleSubmit`)
-- **Constants**: UPPER_SNAKE_CASE (`PASSWORD_REGEX`, `API_ENDPOINTS`)
-
-### 2. TypeScript Rules
-
-- Use `.tsx` extension for all components
-- Use `.ts` extension for hooks and utilities
-- Define types in separate `types.ts` files
-- Name Props interfaces as `ComponentNameProps`
-
-### 3. Component Development Principles
-
-#### Reusable Component Example
-
-```tsx
-// shared/types/buttonTypes.ts
-export interface BasicButtonProps extends StyleProps {
-  children?: React.ReactNode;
-  variant: "primary" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
-  disabled?: boolean;
-  fullWidth?: boolean;
-  className?: string;
-  title?: string;
-  id?: string;
-  type?: "button" | "submit" | "reset";
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-// shared/components/atoms/BasicButton.tsx
-export default function BasicButton({
-  children,
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-  fullWidth = false,
-  className,
-  onClick,
-  id,
-  title,
-  type = "button"
-}: BasicButtonProps) {
-  // Implementation with Tailwind CSS classes
-}
-```
-
 ## 🔧 Implementation Details
 
 ### 1. Routing Configuration
