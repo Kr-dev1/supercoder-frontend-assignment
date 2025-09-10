@@ -4,7 +4,7 @@ A responsive web application built with React, TypeScript, and Tailwind CSS foll
 
 ## 🚀 Live Demo
 
-[Deploy your application and add the live URL here]
+supercoder-frontend-assignment.netlify.app
 
 ## 📋 Table of Contents
 
