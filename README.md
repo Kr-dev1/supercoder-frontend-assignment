@@ -232,47 +232,7 @@ const handleLogin = async (data: LoginFormData) => {
 
 ## 🏛 Architecture Decisions
 
-### 1. Feature-Based Architecture (FBA)
-
-**Decision**: Organize code by business features rather than technical layers.
-
-**Rationale**: 
-- Better code organization for large applications
-- Easier to locate feature-specific code
-- Improved maintainability and scalability
-- Clear separation of concerns
-
-### 2. Atomic Design Pattern
-
-**Decision**: Structure components in atoms, molecules, and organisms.
-
-**Rationale**:
-- Promotes component reusability
-- Clear hierarchy of component complexity
-- Easier to maintain and test
-- Consistent design system
-
-### 3. TypeScript Implementation
-
-**Decision**: Full TypeScript implementation with strict type checking.
-
-**Rationale**:
-- Better developer experience with IntelliSense
-- Catch errors at compile time
-- Improved code documentation
-- Better refactoring support
-
-### 4. Tailwind CSS
-
-**Decision**: Use Tailwind CSS for styling instead of CSS modules or styled-components.
-
-**Rationale**:
-- Rapid development with utility classes
-- Consistent design system
-- Better performance with purging unused styles
-- Easy responsive design implementation
-
-### 5. Static Data Implementation
+### 1. Static Data Implementation
 
 **Decision**: Use dummy data instead of real API integration.
 
@@ -293,66 +253,3 @@ yarn preview      # Preview production build
 # Code Quality
 yarn lint         # Run ESLint
 ```
-
-## 🚀 Deployment
-
-### Vercel Deployment
-
-1. **Install Vercel CLI**
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Deploy**
-   ```bash
-   vercel --prod
-   ```
-
-3. **Configure SPA Routing**
-   - Add `vercel.json` for 404 redirect:
-   ```json
-   {
-     "rewrites": [
-       {
-         "source": "/(.*)",
-         "destination": "/index.html"
-       }
-     ]
-   }
-   ```
-
-### Netlify Deployment
-
-1. **Build the project**
-   ```bash
-   yarn build
-   ```
-
-2. **Deploy to Netlify**
-   - Connect your GitHub repository
-   - Set build command: `yarn build`
-   - Set publish directory: `dist`
-
-3. **Configure SPA Routing**
-   - Add `_redirects` file in `public` folder:
-   ```
-   /*    /index.html   200
-   ```
-
-## 📝 Notes
-
-- **AI Usage**: AI tools were used for development assistance while maintaining code quality standards
-- **No External UI Libraries**: Built with custom components following design system principles
-- **Responsive Design**: Mobile-first approach with breakpoints for tablet and desktop
-- **Accessibility**: Basic accessibility considerations implemented (excluded from evaluation scope)
-- **Performance**: Optimized bundle size with Vite's tree-shaking and code splitting
-
-## 🤝 Contributing
-
-This is an assignment project. For any questions or clarifications, please refer to the project guidelines and requirements.
-
----
-
-**Assignment Duration**: 1-2 days  
-**Focus**: UI implementation with static data  
-**Evaluation Criteria**: Code quality, architecture, UI/UX implementation, functionality
