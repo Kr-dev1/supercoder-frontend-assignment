@@ -1,4 +1,6 @@
-const ProductCard = ({ details }) => {
+import type { ProductCardProps } from '../types/type';
+
+const ProductCard = ({ details }: ProductCardProps) => {
     const colors = [
         { name: 'Yellow', color: 'bg-yellow-400' },
         { name: 'Olive', color: 'bg-green-700' },
